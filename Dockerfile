@@ -14,10 +14,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY Interface_using_gradio_SA_Summarisation.ipynb .
 
 # Expose the port that Jupyter will run on
-EXPOSE  8888
+EXPOSE 8888
 
 # Start Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.allow_origin='*'"]
+
+#Making Jupyter run on the specific port
+jupyter notebook --port 7863 Interface_using_gradio_SA_Summarisation.ipynb
+
 
 # Run the notebook using nbconvert
 RUN jupyter nbconvert --execute Interface_using_gradio_SA_Summarisation.ipynb
