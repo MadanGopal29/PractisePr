@@ -21,7 +21,7 @@ CMD ["jupyter", "notebook", "--ip=127.0.0.1", "--port=7860", "--allow-root", "--
 # Run the notebook using nbconvert
 #RUN jupyter nbconvert --execute Interface_using_gradio_SA_Summarisation.ipynb
 
-RUN jupyter nbconvert --execute --allow-errors --to notebook Interface_using_gradio_SA_Summarisation.ipynb.ipynb
+RUN jupyter nbconvert --execute --allow-errors --to notebook Interface_using_gradio_SA_Summarisation.ipynb
 
 EXPOSE 7860
 
