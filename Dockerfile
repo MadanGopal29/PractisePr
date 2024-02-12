@@ -28,7 +28,7 @@ RUN jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.ti
 FROM nginx
 
 # Copy the HTML file(s) into the container
-COPY index.html /usr/share/nginx/html/
+COPY templatemo_567_nomad_force/index.html /usr/share/nginx/html/
 
 
 
