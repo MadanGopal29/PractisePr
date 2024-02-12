@@ -19,7 +19,9 @@ COPY Interface_using_gradio_SA_Summarisation.ipynb .
 CMD ["jupyter", "notebook", "--ip=127.0.0.1", "--port=7860", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.allow_origin='*'"]
 
 # Run the notebook using nbconvert
-RUN jupyter nbconvert --execute Interface_using_gradio_SA_Summarisation.ipynb
+#RUN jupyter nbconvert --execute Interface_using_gradio_SA_Summarisation.ipynb
+
+RUN jupyter nbconvert --to notebook --execute Interface_using_gradio_SA_Summarisation.ipynb.ipynb
 
 EXPOSE 7860
 
