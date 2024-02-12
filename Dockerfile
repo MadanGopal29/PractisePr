@@ -23,8 +23,6 @@ CMD ["jupyter", "notebook", "--ip=127.0.0.1", "--port=7860", "--allow-root", "--
 
 RUN jupyter nbconvert --execute --allow-errors --to notebook Interface_using_gradio_SA_Summarisation.ipynb
 
-EXPOSE 7860
-
 # Use a lightweight base image
 FROM nginx
 
