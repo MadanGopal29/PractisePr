@@ -2,4 +2,5 @@ jupyter
 gradio
 transformers
 sentencepiece
+torch
 
